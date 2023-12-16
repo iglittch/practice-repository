@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Tea Library</title>
+    <style>
+      body {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/285/original/bg1.jpg?1697721251");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
+        background-position: center;
+        height: 4400px;
+        padding-left: 8%;
+        padding-right: 50%;
+        background-color: #18201d;
+      }
+
+      h1 {
+        margin-bottom: 0;
+      }
+
+      li {
+        list-style: none;
+        display: inline;
+      }
+      ul {
+        display: inline;
+        margin-left: 3px;
+      }
+      button {
+        margin: 10px;
+        background-color: #1d291b;
+        padding: 10px;
+        color: #b6cdbd;
+        text-decoration: none;
+        font-family: "Pacifico", cursive;
+        font-size: 15px;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+        transition: all 100ms ease-in-out;
+        border: #1d291b solid;
+        border-radius: 10px;
+      }
+      button:hover {
+        color: #1d291b;
+        background-color: #b6cdbd;
+        border: 2px solid #1d291b;
+      }
+
+      .center {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+        text-align: center;
+      }
+      .container {
+        width: 820px;
+        background: rgba(242, 249, 241, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        padding: 0;
+      }
+
+      .logo {
+        text-align: left;
+        margin-right: 100px;
+        font-size: 20px;
+        font-family: "Pacifico", cursive;
+        color: #3c493e;
+        padding: 10px;
+      }
+      .navi {
+        color: #b6cdbd;
+        text-decoration: none;
+        margin-left: 10px;
+        font-family: "Josefin Sans", sans-serif;
+        transition: all 100ms ease-in-out;
+      }
+      .navi:hover {
+        font-weight: 600;
+        text-decoration: wavy;
+      }
+
+      .header {
+        width: 780px;
+        padding: 20px;
+        display: block;
+        margin: auto;
+      }
+      .navigation {
+        margin: auto;
+      }
+      .welcome {
+        font-size: 40px;
+        color: #1d291b;
+        font-family: "Josefin Sans", sans-serif;
+        margin-top: 40px;
+      }
+      .logo2 {
+        font-family: "Pacifico", cursive;
+      }
+      .main-subtitle {
+        font-size: 20px;
+        margin-bottom: 100px;
+        color: #bee3c3;
+      }
+      .concern-section {
+        background-color: #b6cdbd;
+        position: relative;
+        padding: 50px;
+        font-size: 30px;
+        text-align: center;
+        font-family: "Josefin Sans", sans-serif;
+        padding-bottom: 80px;
+        margin-bottom: 100px;
+      }
+      .secondary-link {
+        margin: 20px;
+        background-color: #1d291b;
+        border-radius: 100px;
+        padding: 40px;
+        color: #b6cdbd;
+        text-decoration: none;
+        font-family: "Pacifico", cursive;
+        font-size: 20px;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+        transition: all 100ms ease-in-out;
+        border: #1d291b solid;
+      }
+      .secondary-link:hover {
+        color: #1d291b;
+        background-color: #b6cdbd;
+        border: 2px solid #1d291b;
+      }
+
+      .history-section {
+        background-color: #5c715e;
+        padding: 60px;
+        color: #b6cdbd;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 19px;
+        margin-bottom: 100px;
+      }
+
+      .tea-section {
+        background: linear-gradient(to top, #5c715e 0%, #b6cdbd 100%);
+        color: #18201d;
+        padding: 30px;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .tea-img {
+        width: 170px;
+        height: 170px;
+        border-radius: 90px;
+      }
+
+      .contact-section {
+        font-family: "Josefin Sans", sans-serif;
+        padding: 10px;
+        font-size: 20px;
+      }
+      .footer {
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 900;
+        text-align: center;
+        color: #b6cdbd;
+      }
+      .tea-title {
+        font-weight: bolder;
+        color: white;
+      }
+      .tea-info {
+        line-height: 17px;
+      }
+      .learn-more {
+        color: #bee3c3;
+        font-size: large;
+        text-decoration: none;
+        font-weight: 100;
+        transition: all 200ms ease-in-out;
+      }
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+      .health {
+        margin: 50px;
+      }
+      .mood {
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="container">
+        <div>
+          <div>
+            <div class="header">
+              <span class="logo">
+                <strong><em>Tea Library</em></strong>
+              </span>
+
+              <span class="navigation">
+                <ul>
+                  <li>
+                    <a class="navi" href="#health">Health Benefits</a>
+                  </li>
+
+                  <li>
+                    <a class="navi" href="#mood">Mood Benefits</a>
+                  </li>
+
+                  <li>
+                    <a class="navi" href="#history">History</a>
+                  </li>
+
+                  <li>
+                    <a class="navi" href="#history">Contact us</a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+
+          <div class="center">
+            <div class="welcome">
+              <h1>
+                Welcome <br />
+                to <br />
+                The
+                <br />
+                <strong class="logo2"><em>Tea Library</em></strong>
+              </h1>
+              <h2 class="main-subtitle">Let nature take care of you</h2>
+            </div>
+          </div>
+
+          <div class="concern-section">
+            <h2 style="margin: 0 auto">Search by Concern</h2>
+
+            <h4 style="font-weight: 300">Whats your concern?</h4>
+            <br />
+            <a href="#mood" class="secondary-link"> My Mood </a>
+
+            <a href="#health" class="secondary-link"> My Health </a>
+          </div>
+
+          <div id="history" class="history-section">
+            <h2>History of Tisanes as Herbal Remedies</h2>
+            <p>
+              Herbal teas have a long history all over the world. Herbal tea is
+              simply an infusion of any edible plant. It is available in huge
+              varieties and can be made using many different ingredients,
+              including tree bark, flowers, leaves, roots, spices, seeds, and
+              fruit. Some argue that herbal tea is not technically a “tea”
+              because it does not come from the Camellia Sinensis, the tea
+              plant. Traditional Chinese Medicine is famous for using herbal
+              teas to heal countless ailments and afflictions. Herbal tea also
+              has a medicinal history in Sri Lanka, Egypt, and Greece. Many
+              cultures make herbal tea for spiritual benefit and believe it
+              opens up the heart and mind to a spiritual connection.
+              <br />
+              <br />
+
+              For the majority of human history, herbal teas have been the
+              beverage of choice. The earliest verbal record of herbal teas
+              dates back to 2737 BC in China. In written history, we can find
+              records of herbal tea that go as far back as the third century AD.
+              These teas spread from China to Egypt to Japan, and then to Europe
+              and beyond. You may hear herbal tea called a “tisane” in Europe.
+            </p>
+          </div>
+
+          <div class="tea-section">
+            <div class="health">
+              <h2 style="font-size: 40px" id="health">
+                Health Benefits of Tea
+              </h2>
+              <p style="font-size: 18px">
+                Herbal teas like chamomile, peppermint, and ginger tea offer
+                several health-promoting properties and could help improve heart
+                health, digestion, sleep quality, and more. Here are some we
+                recommend:
+              </p>
+
+              <div>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/540/original/Cup_of_Wild_Rose_Hips_Tea_and_Teapot.jpg?1697930743"
+                  alt="rosehip tea"
+                  class="tea-img"
+                />
+                <h3 class="tea-title">RoseHip Tea</h3>
+                <p class="tea-info">
+                  Several older studies have found that rose hip powder may help
+                  reduce inflammation and improve symptoms related to rheumatoid
+                  arthritis and osteoarthritis, including pain.
+                </p>
+
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/536/original/hibiscus.jpg?1697930014"
+                  alt="hibiscus"
+                  class="tea-img"
+                />
+                <h3 class="tea-title">Hibiscus Tea</h3>
+                <p class="tea-info">
+                  In addition to its bold color and unique flavor, hibiscus tea
+                  offers healthful properties. In fact, though research is
+                  mixed, some studies show that hibiscus could significantly
+                  reduce total and LDL (bad) cholesterol, along with blood
+                  pressure
+                </p>
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/539/original/64f489a4ff6d082189d0e9d79091e399.jpg?1697930728"
+                  alt="Peppermint"
+                  class="tea-img"
+                />
+                <h3 class="tea-title">Peppermint Tea</h3>
+
+                <p class="tea-info">
+                  Though peppermint tea is most popularly used to support
+                  digestive health, it also has antioxidant, anticancer,
+                  antibacterial, and antiviral properties.
+                </p>
+              </div>
+              <a
+                href="https://artfultea.com/blogs/wellness/best-teas-to-boost-your-immune-system"
+                class="learn-more"
+                >Learn more about health boosting teas >></a
+              >
+            </div>
+            <hr />
+
+            <div class="mood">
+              <div id="mood">
+                <h2 style="font-size: 40px">Mood Benefits of Tea</h2>
+                <p style="font-size: 18px">
+                  In mild forms, herbal teas may work to lift your mood and
+                  fight the physical symptoms of depression. For centuries,
+                  people have been drinking herbal tea for its natural benefits
+                  and pleasant taste. Here are some we recommend:
+                </p>
+
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/525/original/chamomile.jpg?1697926267"
+                  alt="chamomile"
+                  class="tea-img"
+                />
+                <h3 class="tea-title">Chamomile Tea</h3>
+                <p class="tea-info">
+                  A cup of chamomile tea can help to reduce stress and alleviate
+                  anxiety. Chamomile is well-known for its relaxing properties,
+                  and makes a soothing, aromatic cup of tea that’s perfect for
+                  any time of day. Since chamomile is also a very mild sedative,
+                  it can help you to calm down both physically and mentally.
+                </p>
+
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/537/original/lavender.jpg?1697930259"
+                  alt="lavender"
+                  class="tea-img"
+                />
+                <h3 class="tea-title">Lavender Tea</h3>
+                <p class="tea-info">
+                  Drinking lavender tea before bed can help you achieve more
+                  restful sleep. According to multiple scientific studies,
+                  lavender tea helps calm brain function by triggering chemical
+                  reactions in the nervous system. Lavender tea boosts the
+                  production of dopamine and reduces the stress hormone known as
+                  cortisol. One such study found that lavender increases the
+                  percentage of deep slow-wave sleep, which is considered the
+                  restorative sleep phase.
+                </p>
+
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/538/original/lemon_grass.jpg?1697930325"
+                  alt="lemongrass"
+                  class="tea-img"
+                />
+                <h3 class="tea-title">Lemongrass Tea</h3>
+                <p class="tea-info">
+                  Lemongrass improves blood circulation which ultimately clears
+                  up your skin by treating oily textures. It’s also great for
+                  reducing anxiety and stress, as well as promoting sleep. The
+                  lemongrass aroma can also be used to freshen the air and
+                  uplift your mood.
+                </p>
+              </div>
+              <a
+                href="https://teasetea.com/blogs/lifestyle/7-teas-to-help-boost-your-mood"
+                class="learn-more"
+                >Learn more about mood boosting teas >></a
+              >
+            </div>
+          </div>
+
+          <div id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p>
+              Interested in ordering some tea? Click on the button below.
+              <br />
+              😊
+            </p>
+            <button>Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">Coded by Tanya Jama 👩🏾‍💻</div>
+  </body>
+
+  <script>
+    function orderButton() {
+      let name = prompt("What is your name?");
+      let email = prompt("What is your email?💬");
+      let tea = prompt("What tea would you like to order? 🍵");
+      alert("Almost done!");
+      let answer = prompt("Would you like to join our newsletter? yes/no");
+
+      answer.toLowerCase();
+      if (answer === "yes") {
+        alert(
+          `Hi ${name} ,Further details of your order have been emailed to you. Thank you for your order as well for signing up for the newsletter. Have a wonderful day😊`
+        );
+      } else {
+        if (answer === "no") {
+          alert(
+            `Hi ${name} ,Further details of your order have been emailed to you. Thank you for your order and have a wonderful day😊`
+          );
+        }
+      }
+    }
+
+    let application = document.querySelector("button");
+    application.addEventListener("click", orderButton);
+  </script>
+</html>
